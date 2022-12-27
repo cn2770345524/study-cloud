@@ -1,8 +1,10 @@
 package com.liuhao.cloud.commons.entity;
 
 import lombok.Data;
+import lombok.ToString;
 
 @Data
+@ToString
 public class CommonResult<T> {
 
     private Integer code;

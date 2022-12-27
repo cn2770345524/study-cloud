@@ -9,3 +9,6 @@ spring:
     username: root
     password: qazwsx123
     url: jdbc:mysql://192.168.133.10:3306/payment8001?useUnicode=true&characterEncoding=utf-8&useSSL=false
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.liuhao.cloud.commons.entity

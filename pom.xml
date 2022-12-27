@@ -21,7 +21,7 @@
         <lombok.version>1.16.18</lombok.version>
         <mysql.version>8.0.28</mysql.version>
         <druid.version>1.2.15</druid.version>
-        <mybatis.spring.boot.version>3.0.1</mybatis.spring.boot.version>
+        <mybatis.spring.boot.version>2.2.0</mybatis.spring.boot.version>
     </properties>
 
     <!-- 1、只是声明依赖，并不实际引入，子项目按需声明使用的依赖 -->
