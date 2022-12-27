@@ -1,0 +1,11 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: payment-8001
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: qazwsx123
+    url: jdbc:mysql://192.168.133.10:3306/payment8001?useUnicode=true&characterEncoding=utf-8&useSSL=false
