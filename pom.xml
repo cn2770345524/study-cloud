@@ -7,6 +7,7 @@
     <modules>
         <module>cloud-provider-payment8001</module>
         <module>cloud-api-commons</module>
+        <module>cloud-consumer-order80</module>
     </modules>
     <groupId>groupId</groupId>
     <artifactId>code</artifactId>
