@@ -14,3 +14,5 @@ eureka:
       defaultZone: http://eureka7001:7001/eureka,http://eureka7003:7003/eureka
   server:
     enable-self-preservation: false #关闭保护模式
+logging:
+  config: classpath:log4j2.xml # 配置log4j2的配置文件 ，默认就是log4j2.xml

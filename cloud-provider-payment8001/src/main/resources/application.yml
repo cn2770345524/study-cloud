@@ -23,3 +23,5 @@ eureka:
   instance:
     instance-id: payment8001
     prefer-ip-address: true  #访问路径可以显示IP地址
+logging:
+  config: classpath:log4j2.xml # 配置log4j2的配置文件 ，默认就是log4j2.xml
