@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.liuhao.cloud.eureka.server</groupId>
-    <artifactId>cloud-eureka-server7001</artifactId>
+    <artifactId>cloud-eureka-server</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
