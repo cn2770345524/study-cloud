@@ -5,6 +5,7 @@ import com.liuhao.cloud.commons.entity.Payment;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
@@ -12,7 +13,8 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 public class DefaultController {
 
-    public static final String PAYMENT_URL = "http://localhost:8001";
+    //public static final String PAYMENT_URL = "http://localhost:8001";
+    public static final String PAYMENT_URL = "http://cloud-payment-service";
 
     private static Logger logger = LoggerFactory.getLogger(DefaultController.class);
 
