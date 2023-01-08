@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.liuhao.cloud</groupId>
-    <artifactId>cloud-provider-payment8001</artifactId>
+    <artifactId>cloud-provider-payment</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
