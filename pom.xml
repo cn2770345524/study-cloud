@@ -24,6 +24,7 @@
         <mysql.version>8.0.28</mysql.version>
         <druid.version>1.2.15</druid.version>
         <mybatis.spring.boot.version>2.2.0</mybatis.spring.boot.version>
+        <common.lang.version>3.12.0</common.lang.version>
     </properties>
 
     <!-- 1、只是声明依赖，并不实际引入，子项目按需声明使用的依赖 -->
@@ -87,6 +88,13 @@
                 <version>${lombok.version}</version>
                 <optional>true</optional>
             </dependency>
+            <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${common.lang.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 </project>
