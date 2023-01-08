@@ -1,0 +1,13 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="paymentservice8002" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <module name="cloud-provider-payment" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="com.liuhao.cloud.PaymentServiceApplication" />
+    <option name="PROGRAM_PARAMETERS" value="--spring.profiles.active=two" />
+    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+    <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+    <option name="SHORTEN_COMMAND_LINE" value="NONE" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
