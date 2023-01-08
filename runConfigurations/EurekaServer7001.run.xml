@@ -1,0 +1,13 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="EurekaServer7001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <module name="cloud-eureka-server" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="com.liuhao.cloud.eureka.server.EurekaServerApplication" />
+    <option name="PROGRAM_PARAMETERS" value="--spring.profiles.active=master" />
+    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+    <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+    <option name="SHORTEN_COMMAND_LINE" value="NONE" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
