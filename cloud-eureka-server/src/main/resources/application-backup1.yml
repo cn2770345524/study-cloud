@@ -7,12 +7,14 @@ eureka:
   instance:
     hostname: eureka7002 #指定主机地址
     prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 30 #定义服务多久去注册中心续约
+    lease-expiration-duration-in-seconds: 90 #定义服务多久不去续约认为服务失效
   client:
     fetch-registry: false #指定是否要从注册中心获取服务（注册中心不需要开启）
     register-with-eureka: true #指定是否要注册到注册中心（注册中心不需要开启）
     service-url:
       defaultZone: http://eureka7001:7001/eureka,http://eureka7003:7003/eureka
   server:
-    enable-self-preservation: false #关闭保护模式
+    enable-self-preservation: true #开启保护模式
 logging:
   config: classpath:log4j2.xml # 配置log4j2的配置文件 ，默认就是log4j2.xml
