@@ -21,7 +21,7 @@
 
 maven:eureka-client包内就内置对ribbon的应用，也就是说如果使用eureka作为注册中心，则无需显式在pom文件中映入ribbon的坐标了
 
-![image-20230114164312410](https://raw.githubusercontent.com/cn2770345524/picGoData/master/image/202301141643245.png)
+![image-20230114164312410](resources/.assets/image-20230114164312410.png)
 
 
 
@@ -31,7 +31,7 @@ maven:eureka-client包内就内置对ribbon的应用，也就是说如果使用e
 
 ribbon内所有的负载均衡算法均通过实现`com.netflix.loadbalancer.IRule`接口来作用在程序内，默认使用的是RoundRobinRule（轮询）负载均衡算法，当然有需要时也可自定义负载均衡算法，只需要实现IRule接口即可
 
-![image-20230114164729361](https://raw.githubusercontent.com/cn2770345524/picGoData/master/image/202301141647264.png)
+![image-20230114164729361](resources/.assets/image-20230114164729361.png)
 
 RoundRobinRule（轮询策略）：按照一定的顺序依次调用服务实例。多个服务轮流访问。它是Ribbon默认的负载均衡规则。
 RandomRule（随机策略）：从服务提供者的列表中随机选择一个服务实例。
