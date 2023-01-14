@@ -19,7 +19,7 @@ public class RestTemplateConfiguration {
 
 ```
 
-
+在类中直接使用Autowired注入实例即可使用
 
 ### **get请求方法**
 

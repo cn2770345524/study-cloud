@@ -16,7 +16,7 @@
 2. [什么是CAP（Consistency Availability Partition Tolerance）理论](https://juejin.cn/post/7168844208562765832)
 3. [EnableDiscoveryClient注解](https://github.com/cn2770345524/study-cloud/blob/master/files/注解DiscoveryClient.md)
 4. [Loadbalance注解](https://juejin.cn/post/7054916397893156894)
-5. [RestTemplate的使用]()
+5. [RestTemplate的使用](https://github.com/cn2770345524/study-cloud/blob/master/files/RestTemplate工具类.md)
 
 
 

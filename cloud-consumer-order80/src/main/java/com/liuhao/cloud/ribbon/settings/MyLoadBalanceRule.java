@@ -3,7 +3,6 @@ package com.liuhao.cloud.ribbon.settings;
 import com.netflix.client.config.IClientConfig;
 import com.netflix.loadbalancer.AbstractLoadBalancerRule;
 import com.netflix.loadbalancer.ILoadBalancer;
-import com.netflix.loadbalancer.RoundRobinRule;
 import com.netflix.loadbalancer.Server;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
