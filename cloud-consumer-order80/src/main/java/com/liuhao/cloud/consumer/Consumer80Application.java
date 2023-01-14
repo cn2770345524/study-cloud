@@ -6,7 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.ribbon.RibbonClient;
 
-@RibbonClient(name = "CLOUD-PAYMENT-SERVICE", configuration = MyRuleSetting.class) // 启动该服务时去加载自定义的ribbon配置
+// 启动该服务时去加载自定义的ribbon配置，注意服务名的大小写问题，有可能因为大小写问题导致无法成功配置
+@RibbonClient(name = "cloud-payment-service", configuration = MyRuleSetting.class)
 @EnableDiscoveryClient
 @SpringBootApplication
 public class Consumer80Application {

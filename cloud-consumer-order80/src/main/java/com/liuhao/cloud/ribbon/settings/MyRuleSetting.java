@@ -1,7 +1,6 @@
 package com.liuhao.cloud.ribbon.settings;
 
 import com.netflix.loadbalancer.IRule;
-import com.netflix.loadbalancer.RandomRule;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -17,8 +16,8 @@ import org.springframework.context.annotation.Configuration;
 public class MyRuleSetting {
 
     @Bean
-    public IRule getRule(){
-        return new RandomRule();
+    public IRule iRule(){
+        return new MyLoadBalanceRule();
     }
 
 }
