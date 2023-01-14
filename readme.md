@@ -14,8 +14,8 @@
 
 |                                                              | 跳转链接                                                     |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 1.什么是CAP（Consistency Availability Partition Tolerance）理论 | [CAP定理（CAP theorem](https://juejin.cn/post/7168844208562765832) |
-| 2.discoveryClient注解                                        |                                                              |
+| 1.什么是CAP（Consistency Availability Partition Tolerance）理论 | [https://juejin.cn/post/7168844208562765832](https://juejin.cn/post/7168844208562765832) |
+| 2.discoveryClient注解                                        | [study-cloud/注解DiscoveryClient.md at master · cn2770345524/study-cloud (github.com)](https://github.com/cn2770345524/study-cloud/blob/master/files/注解DiscoveryClient.md) |
 | 3.loadbalance注解                                            |                                                              |
 
 
