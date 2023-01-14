@@ -12,11 +12,11 @@
 
 ## 基础知识
 
-|                                                              | 跳转链接                                                     |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 1.什么是CAP（Consistency Availability Partition Tolerance）理论 | [https://juejin.cn/post/7168844208562765832](https://juejin.cn/post/7168844208562765832) |
-| 2.discoveryClient注解                                        | [study-cloud/注解DiscoveryClient.md at master · cn2770345524/study-cloud (github.com)](https://github.com/cn2770345524/study-cloud/blob/master/files/注解DiscoveryClient.md) |
-| 3.loadbalance注解                                            |                                                              |
+1. [springboot知识]([Spring Boot 教程 - Spring Boot 教程 (hxstrive.com)](https://www.hxstrive.com/subject/spring_boot/136.htm))
+2. [什么是CAP（Consistency Availability Partition Tolerance）理论](https://juejin.cn/post/7168844208562765832)
+3. [EnableDiscoveryClient注解](https://github.com/cn2770345524/study-cloud/blob/master/files/注解DiscoveryClient.md)
+4. [Loadbalance注解](https://juejin.cn/post/7054916397893156894)
+5. [RestTemplate的使用]()
 
 
 
