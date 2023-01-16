@@ -189,6 +189,39 @@ userservice: # 给某个微服务配置负载均衡规则，这里是userservice
 
 
 
+## ribbon常用配置
+
+```yaml
+# 指定性配置，只对指定名称的微服务生效的配置
+RIBBON-SERVICE-B: # 这一行就是微服务的名称，
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+    ConnectTimeout: 3000
+    ReadTimeout: 60000
+    MaxAutoRetries: 3 #对第一次请求的服务的重试次数
+    MaxAutoRetriesNextServer: 1 #要重试的下一个服务的最大数量（不包括第一个服务）
+    OkToRetryOnAllOperations: true
+```
+
+
+
+```yaml
+# 全局配置对调用每一种微服务都生效
+ribbon:
+  NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+  ConnectTimeout: 3000
+  ReadTimeout: 60000
+  MaxAutoRetries: 3 #对第一次请求的服务的重试次数
+  MaxAutoRetriesNextServer: 1 #要重试的下一个服务的最大数量（不包括第一个服务）
+  OkToRetryOnAllOperations: true
+```
+
+
+
+## ribbon的官网
+
+https://github.com/Netflix/ribbon/wiki/Getting-Started
+
 ## 参考链接
 
 1. [Spring Cloud Ribbon配置详解](https://blog.csdn.net/unbelievevc/article/details/128274247)
