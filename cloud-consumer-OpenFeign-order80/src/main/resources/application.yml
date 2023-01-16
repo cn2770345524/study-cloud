@@ -1,0 +1,20 @@
+server:
+  port: 80
+spring:
+  application:
+    name: cloud-consumer-order80
+eureka:
+  client:
+    register-with-eureka: true #是否向注册中心注册自己
+    fetchRegistry: true #是否从注册中心抓取已有的注册信息 默认true，集群必须设置为true
+    service-url:
+      #      设置与eureka server交互的地址查询服务和注册服务都需要依赖这个地址
+      #      defaultZone: http://localhost:7001/eureka #单机版
+      defaultZone: http://eureka7001:7001/eureka #集群版
+  instance:
+    instance-id: cloud-consumer-order80
+    prefer-ip-address: true  #访问路径可以显示IP地址
+    lease-renewal-interval-in-seconds: 30 #定义服务多久去注册中心续约
+    lease-expiration-duration-in-seconds: 90 #定义服务多久不去续约认为服务失效
+logging:
+  config: classpath:log4j2.xml # 配置log4j2的配置文件 ，默认就是log4j2.xml
