@@ -26,6 +26,7 @@ public class MyLoadBalanceRule extends AbstractLoadBalancerRule {
     }
 
     public Server choose(ILoadBalancer lb, Object key) {
+        // 这里复制的是官方提供的轮询负责均衡算法的实现，这下面一行打一个日志在日志中观察是否有出现，出现即表示配置成功
         log.info("com.liuhao.cloud.ribbon.settings.MyLoadBalanceRule.choose method:{}",key);
         if (lb == null) {
             log.warn("no load balancer");

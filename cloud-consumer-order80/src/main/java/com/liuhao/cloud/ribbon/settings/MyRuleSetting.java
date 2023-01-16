@@ -15,9 +15,9 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class MyRuleSetting {
 
-    @Bean
-    public IRule iRule(){
-        return new MyLoadBalanceRule();
-    }
+    //@Bean
+    //public IRule iRule(){
+    //    return new MyLoadBalanceRule();
+    //}
 
 }
