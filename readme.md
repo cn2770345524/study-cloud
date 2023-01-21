@@ -37,9 +37,12 @@
 
 负载均衡
 
-| 名称   | 跳转链接                                                     |
-| ------ | ------------------------------------------------------------ |
-| ribbon | https://github.com/cn2770345524/study-cloud/blob/master/files/what%20is%20Ribbon.md |
-|        |                                                              |
-|        |                                                              |
+| 名称      | 跳转链接                                                     | 说明                                      |
+| --------- | ------------------------------------------------------------ | ----------------------------------------- |
+| ribbon    | [点击跳转查看详情](https://github.com/cn2770345524/study-cloud/blob/master/files/what%20is%20Ribbon.md) |                                           |
+| openFeign | [点击跳转查看详情](https://github.com/cn2770345524/study-cloud/blob/master/files/openFeign.md) | openFeign是在ribbon调用服务上做了二次封装 |
+|           |                                                              |                                           |
 
+
+
+熔断降级（断路器）
