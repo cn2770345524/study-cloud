@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.UUID;
+
 @RequestMapping("/payment")
 @RestController
 public class PaymentController {
@@ -25,14 +27,21 @@ public class PaymentController {
     public CommonResult<Payment> selectOne(@PathVariable("id") Long id) {
         Payment payment = this.paymentService.queryById(id);
         logger.info("payment :{}", payment);
-        return new CommonResult<Payment>(200, "port:{"+serverPort+"}", payment);
+        return new CommonResult<Payment>(200, "port:{" + serverPort + "}", payment);
     }
 
     @PostMapping("create")
     public CommonResult<Payment> create(@RequestBody Payment payment) {
         Payment insert = this.paymentService.insert(payment);
         logger.info("payment {} insert:", insert);
-        return new CommonResult<>(200, "port:{"+serverPort+"}", insert);
+        return new CommonResult<>(200, "port:{" + serverPort + "}", insert);
+    }
+
+    @RequestMapping(method = RequestMethod.GET,value = "/uuid")
+    public CommonResult<String> getUUID() {
+        String uuid = UUID.randomUUID().toString();
+        logger.info("uuid:{}", uuid);
+        return new CommonResult<>(200, uuid, null);
     }
 
 }
