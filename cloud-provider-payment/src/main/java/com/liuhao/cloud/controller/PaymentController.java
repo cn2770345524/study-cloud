@@ -27,6 +27,11 @@ public class PaymentController {
     public CommonResult<Payment> selectOne(@PathVariable("id") Long id) {
         Payment payment = this.paymentService.queryById(id);
         logger.info("payment :{}", payment);
+        try {
+            Thread.sleep(4000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return new CommonResult<Payment>(200, "port:{" + serverPort + "}", payment);
     }
 
