@@ -46,3 +46,9 @@
 
 
 熔断降级（断路器）
+
+
+
+参考链接：
+
+1. [微服务是什么 (biancheng.net)](http://c.biancheng.net/springcloud/micro-service.html)
