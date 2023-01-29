@@ -27,14 +27,14 @@ public class PaymentController {
 
     // 设置失败的兜底犯法，设置方法超时的时间timeout属性
     @HystrixCommand(fallbackMethod = "selectOne_fallback", commandProperties = {
-            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "2000")
+            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "3000")
     })
     @GetMapping("get/{id}")
     public CommonResult<Payment> selectOne(@PathVariable("id") Long id) {
         Payment payment = this.paymentService.queryById(id);
         logger.info("payment :{}", payment);
         try {
-            Thread.sleep(4000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
