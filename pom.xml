@@ -6,6 +6,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>cloud-provider-payment</module>
+        <module>cloud-provider-hystrix-payment</module>
         <module>cloud-api-commons</module>
         <module>cloud-consumer-order80</module>
         <module>cloud-eureka-server</module>
