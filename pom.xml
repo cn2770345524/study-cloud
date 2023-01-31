@@ -11,6 +11,7 @@
         <module>cloud-api-commons</module>
         <module>cloud-consumer-order80</module>
         <module>cloud-eureka-server</module>
+        <module>cloud-hystrix-dashboard</module>
     </modules>
     <groupId>groupId</groupId>
     <artifactId>code</artifactId>
