@@ -3,6 +3,7 @@ package com.liuhao.cloud.controller;
 import com.liuhao.cloud.commons.entity.CommonResult;
 import com.liuhao.cloud.commons.entity.Payment;
 import com.liuhao.cloud.service.PaymentService;
+import com.netflix.hystrix.contrib.javanica.annotation.DefaultProperties;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import org.slf4j.Logger;
@@ -15,6 +16,7 @@ import java.util.UUID;
 
 @RequestMapping("/payment")
 @RestController
+@DefaultProperties(defaultFallback = "default_fallback_method")
 public class PaymentController {
 
     private static Logger logger = LoggerFactory.getLogger(PaymentController.class);
@@ -48,15 +50,21 @@ public class PaymentController {
         return new CommonResult<>(200, "port:{" + serverPort + "}", insert);
     }
 
+    @HystrixCommand
     @RequestMapping(method = RequestMethod.GET, value = "/uuid")
     public CommonResult<String> getUUID() {
         String uuid = UUID.randomUUID().toString();
+        int a = 10 / 0;
         logger.info("uuid:{}", uuid);
         return new CommonResult<>(200, uuid, null);
     }
 
     public CommonResult<Payment> selectOne_fallback(Long id) {
-        return new CommonResult<>(500,"服务调用失败，返回默认标识");
+        return new CommonResult<>(500, "服务调用失败，返回默认标识");
+    }
+
+    public CommonResult<String> default_fallback_method() {
+        return new CommonResult<>("当前接口没有设置降级方法，因此使用默认降级方法");
     }
 
 }
