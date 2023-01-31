@@ -50,6 +50,11 @@ public class DefaultController {
         return paymentService.selectOne(id);
     }
 
+    @GetMapping("/payment/uuid")
+    public CommonResult<String> getUUID(){
+        return paymentService.getUUID();
+    }
+
     @GetMapping("/payment/discovery")
     public Object getDiscoveryInfo() {
         List<String> services = discoveryClient.getServices();

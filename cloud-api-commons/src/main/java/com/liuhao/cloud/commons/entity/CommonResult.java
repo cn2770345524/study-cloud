@@ -14,6 +14,10 @@ public class CommonResult<T> {
     public CommonResult() {
     }
 
+    public CommonResult(String message) {
+        this(200, message);
+    }
+
     public CommonResult(Integer code, String message) {
         this(code, message, null);
     }
