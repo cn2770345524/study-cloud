@@ -27,19 +27,23 @@ public class PaymentController {
     @Autowired
     private PaymentService paymentService;
 
-    // 设置失败的兜底犯法，设置方法超时的时间timeout属性
+    // 为当前方法设置熔断机制，允许开启熔断器，当2秒内10次请求失败了6次则视为当前接口失效，直接走降级方法的逻辑
+    // 窗口期为10秒，当熔断器开启后10秒自动重试，如果2秒10次请求失败小于6次则视为接口已恢复
+    // 注意：在10秒的窗口期内，就算发送是正确请求，也会因为熔断器的开启，返回默认的fallback_method
     @HystrixCommand(fallbackMethod = "selectOne_fallback", commandProperties = {
-            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "3000")
+            @HystrixProperty(name = "circuitBreaker.enabled", value = "true"), //是否开启熔断器
+            @HystrixProperty(name = "metrics.rollingStats.timeInMilliseconds", value = "2000"), //统计时间窗
+            @HystrixProperty(name = "circuitBreaker.requestVolumeThreshold", value = "10"), //统计时间窗内请求次数
+            @HystrixProperty(name = "circuitBreaker.sleepWindowInMilliseconds", value = "10000"), //休眠时间窗口期
+            @HystrixProperty(name = "circuitBreaker.errorThresholdPercentage", value = "60"), //在统计时间窗口期以内，请求失败率达到 60% 时进入熔断状态)
     })
     @GetMapping("get/{id}")
     public CommonResult<Payment> selectOne(@PathVariable("id") Long id) {
+        if (id <= 0) {
+            throw new RuntimeException("id 必须大于0");
+        }
         Payment payment = this.paymentService.queryById(id);
         logger.info("payment :{}", payment);
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         return new CommonResult<Payment>(200, "port:{" + serverPort + "}", payment);
     }
 
