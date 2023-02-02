@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: cloud-hystrix-dashboard
+server:
+  port: 9001
+hystrix:
+  dashboard:
+    proxy-stream-allow-list:
+      - "localhost"
+logging:
+  config: classpath:log4j2.xml # 配置log4j2的配置文件 ，默认就是log4j2.xml
