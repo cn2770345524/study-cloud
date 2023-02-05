@@ -9,8 +9,8 @@ spring:
         locator:
           enabled: true #开启从注册中心动态创建路由的功能，利用微服务名进行路由
       routes:
-        - id: payment
-          uri: lb://cloud-payment-service
+        - id: payment # 路由的id，理论是唯一的，最好根据微服务的名称来
+          uri: lb://cloud-payment-service # 注意是uri不是url
           predicates:
             - Path=/payment/**
 
