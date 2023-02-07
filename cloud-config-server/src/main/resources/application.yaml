@@ -1,0 +1,29 @@
+server:
+  port: 9676
+spring:
+  application:
+    name: cloud-config-center
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/cn2770345524/spring-config.git
+          force-pull: true
+          # 如果Git仓库为公开仓库，可以不填写用户名和密码，如果是私有仓库需要填写
+          # username: ********
+          # password: ********
+eureka:
+  client:
+    register-with-eureka: true #是否向注册中心注册自己
+    fetchRegistry: true #是否从注册中心抓取已有的注册信息 默认true，集群必须设置为true
+    service-url:
+      #      设置与eureka server交互的地址查询服务和注册服务都需要依赖这个地址
+      #      defaultZone: http://localhost:7001/eureka #单机版
+      defaultZone: http://eureka7001:7001/eureka
+  instance:
+    prefer-ip-address: true  #访问路径可以显示IP地址
+    instance-id: cloud-config-center:9676
+    lease-renewal-interval-in-seconds: 30 #定义服务多久去注册中心续约
+    lease-expiration-duration-in-seconds: 90 #定义服务多久不去续约认为服务失效
+logging:
+  config: classpath:log4j2.xml # 配置log4j2的配置文件 ，默认就是log4j2.xml

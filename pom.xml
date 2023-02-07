@@ -13,6 +13,7 @@
         <module>cloud-eureka-server</module>
         <module>cloud-hystrix-dashboard</module>
         <module>cloud-gateway</module>
+        <module>cloud-config-server</module>
     </modules>
     <groupId>groupId</groupId>
     <artifactId>code</artifactId>
