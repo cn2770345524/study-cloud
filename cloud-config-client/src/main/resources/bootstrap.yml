@@ -9,7 +9,10 @@ spring:
       name: config  #配置文件名称，config-dev.yml 中的 config
       profile: develop  #环境名  config-dev.yml 中的 dev
       #这里不要忘记添加 http:// 否则无法读取
-      uri: http://localhost:9676 #Spring Cloud Config 服务端（配置中心）地址
+      #uri: http://localhost:9676 #Spring Cloud Config 服务端（配置中心）地址
+      discovery:
+        enabled: true # 使用discovery client去注册中心找配置中心
+        service-id: cloud-config-center
 
 eureka:
   client:
