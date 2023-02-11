@@ -13,6 +13,12 @@ spring:
       discovery:
         enabled: true # 使用discovery client去注册中心找配置中心
         service-id: cloud-config-center
+  ##### RabbitMQ 相关配置，15672 是web 管理界面的端口，5672 是 MQ 的访问端口###########
+  rabbitmq:
+    host: 192.168.133.10
+    port: 5672
+    username: guest
+    password: guest
 
 eureka:
   client:
