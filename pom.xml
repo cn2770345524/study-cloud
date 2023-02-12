@@ -15,6 +15,7 @@
         <module>cloud-gateway</module>
         <module>cloud-config-server</module>
         <module>cloud-config-client</module>
+        <module>cloud-stream-rabbitmq-provider</module>
     </modules>
     <groupId>groupId</groupId>
     <artifactId>code</artifactId>
