@@ -3,6 +3,8 @@ server:
 spring:
   application:
     name: cloud-payment-service
+  zipkin:
+    base-url: http://127.0.0.1:9411/
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
