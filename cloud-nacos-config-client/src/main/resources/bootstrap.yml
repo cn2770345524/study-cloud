@@ -1,0 +1,17 @@
+server:
+  port: 6633
+spring:
+  application:
+    name: cloud-nacos-config-client
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+      config:
+        server-addr: 127.0.0.1:8848 # config也需要配置server-addr
+        file-extension: yaml
+        prefix: configClient
+logging:
+  config: classpath:log4j2.xml # 配置log4j2的配置文件 ，默认就是log4j2.xml
