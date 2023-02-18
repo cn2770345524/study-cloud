@@ -1,0 +1,11 @@
+server:
+  port: 7001
+spring:
+  application:
+    name: cloud-nacos-consumer-order
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+logging:
+  config: classpath:log4j2.xml # 配置log4j2的配置文件 ，默认就是log4j2.xml
