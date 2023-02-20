@@ -18,6 +18,7 @@
         <module>cloud-stream-rabbitmq-provider</module>
         <module>cloud-nacos-provider-payment</module>
         <module>cloud-nacos-consumer-order</module>
+        <module>cloud-nacos-config-client</module>
     </modules>
     <groupId>groupId</groupId>
     <artifactId>code</artifactId>
