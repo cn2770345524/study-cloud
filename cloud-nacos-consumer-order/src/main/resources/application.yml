@@ -6,6 +6,10 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 127.0.0.1:8848
+        server-addr: 192.168.133.10:8848 # 配置nacos注册中心的地址
+    sentinel:
+      transport:
+        dashboard: 192.168.133.10:8080 #配置sentinel dashboard的地址
+        port: 8719 #默认8719端口，假如被占用会自动从8719开始依次+1扫描,直至找到未被占用的端口
 logging:
   config: classpath:log4j2.xml # 配置log4j2的配置文件 ，默认就是log4j2.xml
