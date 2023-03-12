@@ -52,4 +52,5 @@
 参考链接：
 
 1. [微服务是什么 (biancheng.net)](http://c.biancheng.net/springcloud/micro-service.html)
-1. [| Java 全栈知识体系 (pdai.tech)](https://pdai.tech/)
+2. [| Java 全栈知识体系 (pdai.tech)](https://pdai.tech/)
+3. [分布式ID方案](https://www.woshinlper.com/system-design/micro-service/%E5%88%86%E5%B8%83%E5%BC%8Fid%E7%94%9F%E6%88%90%E6%96%B9%E6%A1%88%E6%80%BB%E7%BB%93/)
